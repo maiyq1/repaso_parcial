@@ -6,24 +6,28 @@ export default {
   components: {technogymtoolbarComponent},
   data() {
     return {
-      treadData: []
+      recordData: [],
+      centersData: [],
     }
   },
   mounted() {
     new TechnoApiService().getAllRecords().then((response) => {
-      this.treadData = response.data;
+      this.recordData = response.data;
+    })
+    new TechnoApiService().getAllCenters().then((response) => {
+      this.centersData = response.data;
     })
   }
 }
 </script>
 
 <template>
-  <pv-datatable :value="treadData">
-    <pv-column header="Record Id" field="id"></pv-column>
-    <pv-column header="Treadmill Id" field="treadmillId"></pv-column>
-    <pv-column header="Volts" field="volts"></pv-column>
-    <pv-column header="Watts" field="watts"></pv-column>
-    <pv-column header="HP" field="hp"></pv-column>
+  <pv-datatable :value="recordData" paginator :rows="3" :rows-per-page-options="[3,6,9,13]" sort-mode="multiple">
+    <pv-column header="Record Id" field="id" sortable></pv-column>
+    <pv-column header="Treadmill Id" field="treadmillId" sortable></pv-column>
+    <pv-column header="Volts" field="volts" sortable></pv-column>
+    <pv-column header="Watts" field="watts" sortable></pv-column>
+    <pv-column header="HP" field="hp" sortable></pv-column>
   </pv-datatable>
 </template>
 
