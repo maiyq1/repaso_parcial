@@ -1,16 +1,19 @@
 <script>
-import HomeView from "@/components/home-view.component.vue";
-import TechnogymToolbar from "@/components/technogym-toolbar.component.vue";
+import HomeView from "@/components/home-component.vue";
+import TechnogymToolbar from "@/components/technogymtoolbar-component.vue";
+import HealthcheckView from "@/components/healthcheck-component.vue";
 
 export default {
   name: 'App',
-  components: {TechnogymToolbar, HomeView},
+  components: {HealthcheckView, TechnogymToolbar, HomeView},
 }
 </script>
 
 <template>
-  <technogym-toolbar></technogym-toolbar>
-  <home-view></home-view>
+  <main>
+    <router-view></router-view>
+  </main>
+
 </template>
 
 <style scoped>
