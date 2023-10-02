@@ -37,7 +37,6 @@ export default {
 </script>
 
 <template>
-  <pv-button @click="calculateAvg">Calcular datos</pv-button>
   <pv-card>
     <template #title>Average Performance</template>
     <template #content>
@@ -46,6 +45,7 @@ export default {
       <p v-if="avgHP !== null">Promedio de Watts: {{ avgHP }}</p>
     </template>
   </pv-card>
+  <pv-button @click="calculateAvg">Obtener promedios</pv-button>
 </template>
 
 <style scoped>
