@@ -7,6 +7,7 @@ import App from './App.vue';
 import PrimeVue from "primevue/config";
 import Toolbar from "primevue/toolbar";
 import Button from "primevue/button";
+import Card from "primevue/card";
 import my_router from "./router";
 
 const app = createApp(App);
@@ -16,5 +17,6 @@ app.use(my_router);
 
 app.component('pv-toolbar', Toolbar);
 app.component('pv-button', Button);
+app.component('pv-card', Card);
 
 app.mount("#app");

@@ -8,7 +8,6 @@ export default {
 </script>
 
 <template>
-  <technogymtoolbar-component></technogymtoolbar-component>
   <h1>404</h1>
   <pv-button @click="$router.push('/home')">Home</pv-button>
 </template>

@@ -8,7 +8,6 @@ export default {
 </script>
 
 <template>
-  <technogymtoolbar-component></technogymtoolbar-component>
   <h1>HealthCheck view</h1>
   <p>Card</p>
 </template>

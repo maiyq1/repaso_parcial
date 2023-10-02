@@ -11,6 +11,7 @@ export default {
 
 <template>
   <main>
+    <technogym-toolbar></technogym-toolbar>
     <router-view></router-view>
   </main>
 
